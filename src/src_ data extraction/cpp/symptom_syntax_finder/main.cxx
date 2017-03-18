@@ -1,12 +1,13 @@
-#include "finder.hpp"
+#include "symptom_synx_crawl.hpp"
 using namespace std;
 
 int main(int argc, char** argv) {
-   finder finder;
+   symptom_synx_crawl symptom_synx_crawl;
 
-   finder.ini("headache");
-   finder.run();
-   finder.show();
+   symptom_synx_crawl.ini("headache");
+   symptom_synx_crawl.run();
+   symptom_synx_crawl.show();
+   symptom_synx_crawl.write();
 
 
    return 0;
