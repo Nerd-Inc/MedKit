@@ -37,6 +37,7 @@ void classifier::find() {
         }
     }
     cout << "\t\t[ok]" << endl;
+    //12 o'clock data haha
 }
 
 void classifier::show() {
