@@ -10,7 +10,7 @@ class classifier {
     bool exe = false;
     set<string> found_matches;
     public:
-    void check(), find(), relate(), question();
+    void check(), find(), relate(), question(), show();
 };
 
 void classifier::check() {
@@ -37,6 +37,15 @@ void classifier::find() {
         }
     }
     cout << "\t\t[ok]" << endl;
+}
+
+void classifier::show() {
+    if(!exe) return;
+    for(auto i: found_matches) {
+        system("clear");
+        cout << "--- SYMPTOMS ----" << endl;
+        cout << "\t\t" << i << endl;
+    }
 }
 
 void classifier::relate() {
