@@ -1,0 +1,15 @@
+/* Holds all vaibales and extra classes */
+$fonts: 'Roboto', 'Ubuntu', 'Segeo UI', sans-serif;
+
+.reset {
+	padding: 0px;
+	margin: 0px;
+}
+.full-screen {
+	width: 100%;
+	height: 100%;
+}
+.describe {
+	font-family: $fonts;
+	color: $white;
+}

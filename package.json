@@ -1,0 +1,27 @@
+{
+  "name": "medkit",
+  "version": "1.0.0",
+  "description": "A symptoms search engine",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinsnji/MedKit.git"
+  },
+  "keywords": [
+    "Medical",
+    "system"
+  ],
+  "author": "Nerd Inc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/collinsnji/MedKit/issues"
+  },
+  "homepage": "https://github.com/collinsnji/MedKit#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.81.0"
+  }
+}
