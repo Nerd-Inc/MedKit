@@ -1,2 +1,2 @@
 parser:
-	g++ main.cxx -o finder -std=c++1y
+	g++ main.cxx -o classifier -std=c++1y

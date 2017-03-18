@@ -4,13 +4,25 @@
 using namespace std;
 
 namespace tools {
-	vector<string> read_file(string), seperate(string, char);
-	bool kill(string);
+	vector<string> read_file(string), seperate(string, char), read_dir(string);
+	bool kill(string), check_file(string);
 	template<class T> void show(T);
 	void show(vector<string>);
 	string remove_space(string);
 }
 
+
+bool tools::check_file(string filename) {
+	ifstream readfile(filename.c_str());
+	if(readfile.good()) return true;
+
+	return false;
+}
+
+vector<string> tools::read_dir(string dirname) {
+
+	
+}
 
 //template -> string, vector
 vector<string> tools::read_file(string filename) {

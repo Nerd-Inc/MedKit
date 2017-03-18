@@ -1,4 +1,5 @@
 #include "symptom_synx_crawl.hpp"
+#include "classifier.hpp"
 using namespace std;
 
 int main(int argc, char** argv) {
@@ -9,6 +10,9 @@ int main(int argc, char** argv) {
    symptom_synx_crawl.show();
    symptom_synx_crawl.write();
 
+   classifier classi;
+   classi.check();
+   classi.find();
 
    return 0;
 }

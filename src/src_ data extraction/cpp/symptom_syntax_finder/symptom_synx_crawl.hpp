@@ -30,7 +30,7 @@ void symptom_synx_crawl::ini(string query) {
         cout << "\t\t[ok]" << endl;
         exe = true;
     }
-    else cout << "\t\t[fail]" << endl;
+    else cout << "\t\t[failed]" << endl;
 }
 
 void symptom_synx_crawl::run() {
