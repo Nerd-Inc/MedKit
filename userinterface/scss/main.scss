@@ -1,0 +1,30 @@
+@import 'partials/colors';
+@import 'partials/variables';
+
+body {
+	@extend .reset;
+	background-color: $white
+}
+.container {
+	@extend .reset;
+	@extend .full-screen;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+}
+.intro {
+	display: block;
+	text-align: center;
+	width: 100%;
+	flex-grow: 1;
+	background-color: $deep-purple;
+	align-items: center;
+	h2, p { @extend .describe; }
+	h2 { font-size: 5em; margin-bottom: 0px;}
+	p { font-size: 1.5em; margin-top: 0px;}
+}
+.mainContent {
+	background-color: $white;
+	flex-grow: 3;
+}
