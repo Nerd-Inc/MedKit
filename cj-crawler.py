@@ -1,14 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
 
-def medspider():
+def medspider(URL_LINK):
+	url = URL_LINK
+	source_html = requests.get(url)
+	plain_html = source_html.text
+	soup = BeautifulSoup(plain_html, "html.parser")
+	for link in soup.findAll('a'):
+		href = str(link.get("href"))
+		if href[0] == 'h':
+			medspider.count += 1
+			print(str(medspider.count) + ": " + href)
 
-        url = "http://symptoms.webmd.com/#introView"
-        source_html = requests.get(url)
-        plain_html = source_html.text
-        soup = BeautifulSoup(plain_html, "html.parser")
-        for link in soup.findAll('a'):
-            href = link.get("href")
-            print(href)
-medspider()
 
+medspider.count = 0
+medspider("http://symptomchecker.webmd.com")
