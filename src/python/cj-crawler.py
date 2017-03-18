@@ -14,4 +14,4 @@ def medspider(URL_LINK):
 
 
 medspider.count = 0
-medspider("http://symptomchecker.webmd.com")
+medspider("http://foodcointernational.com")
