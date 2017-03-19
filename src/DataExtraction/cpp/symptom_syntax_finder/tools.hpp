@@ -11,7 +11,8 @@
 using namespace std;
 
 namespace tools {
-	vector<string> read_file(string), seperate(string, char), read_dir(string);
+	vector<string> read_file(string), seperate(string, char);
+	vector<vector<string>> read_dir(string);
 	bool kill(string), check_file(string);
 	template<class T> void show(T);
 	void show(vector<string>);
@@ -41,13 +42,19 @@ bool tools::check_file(string filename) {
 	return false;
 }
 
-vector<string> tools::read_dir(string dirname) {
+vector<vector<string>> tools::read_dir(string dirname) {
 
 	string command = "ls " + dirname;
 	//cout << "command: " << command << endl;
 	string files = tools::pipe_terminal(command);
-	//cout << files << endl;
-	return seperate(files, '\0');
+	//cout << "FILES: " << files << endl;
+	vector<string> hold = seperate(files, '\n');
+	//for(auto i: hold) cout << "...> " << i << endl;
+
+	vector<vector<string>> ret;
+	for(auto i: hold) ret.push_back(tools::read_file(dirname + "/" + i));
+
+	return ret;
 }
 
 //template -> string, vector
@@ -102,7 +109,7 @@ vector<string> tools::seperate(string input, char del) {
 	while(input.find(del)!=string::npos) {
 		ret.push_back(input.substr(0, input.find(del)));
 		input.erase(0, input.find(del)+1);
-	} ret.push_back(input);
+	} if(!input.empty()) ret.push_back(input);
 	
 	//for(auto i: ret) cout << i << endl;
 	

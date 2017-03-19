@@ -28,7 +28,7 @@ void classifier::check() {
 void classifier::find() {
     if(!exe) return;
     vector<string> file {tools::read_file(_FILE)};
-    vector<string> file2 {tools::read_dir(PARSED_DIR)};
+    vector<vector<string>> file2 {tools::read_dir(PARSED_DIR)};
     cout << "Finding: [ RUNTIME: " << file.size() * file2.size() << "]";
 
     if(file.size() < 1) {
@@ -36,27 +36,32 @@ void classifier::find() {
         exit(1);
     }
 
-    
-   for(unsigned int i=0;i<file.size();i++) {
-        for(unsigned int i1;i1<file2.size();i1++) {
-            if(file2[i1].find(file[i])!=string::npos) {
-                found_matches.insert(file2[i1]);
+    cout << "\tDataFiles: [" << file2.size() << "]" << endl;
+    for(auto i: file2) { //vector<vector<string>>
+        //cout << "in: " << i.size() << endl;
+        for(unsigned int j=0;j<i.size();j++) { //vector<string>>
+            //cout << "-----> " << i[j] << endl;
+            cout << "Scanning..." << endl;
+            for(auto k: file) {
+                cout << "[ " << k << " ] " << endl;
+                if(i[j].find(k)!=string::npos) {
+                    found_matches.insert(i[j]);
+                }
             }
         }
-    } 
+    }
     
     cout << "\t\t[ok]" << endl;
     //12 o'clock data haha
 }
 
 void classifier::show() {
-    system("clear");
+   // system("clear");
     if(!exe) return;
-    /*for(auto i: found_matches) {
-        system("clear");
+    for(auto i: found_matches) {
         cout << "--- SYMPTOMS ----" << endl;
         cout << "\t\t" << i << endl;
-    }*/
+    }
 }
 
 void classifier::relate() {
@@ -64,10 +69,10 @@ void classifier::relate() {
 }
 
 void classifier::question() {
+    system("clear");
     ofstream writefile(NAMES, ios::app);
     
     for(auto i: found_matches) {
-        system("clear");
         cout << "Symp: [" << i << "]\t\t\t: ";
         char in;
         cin >> in;

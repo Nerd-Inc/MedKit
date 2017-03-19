@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
    classifier classi;
    classi.check();
    classi.find();
-   //classi.show();
+   classi.show();
 
    return 0;
 }
