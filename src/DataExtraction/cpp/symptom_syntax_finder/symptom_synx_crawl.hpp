@@ -1,10 +1,3 @@
-/*
-
-syntax style--->
-
-    [query] -> (is(a)) = DEF
-
-*/
 
 #ifndef symptom_synx_crawlr_H_INCLUDED
 #define symptom_synx_crawlr_H_INCLUDED
@@ -24,9 +17,19 @@ class symptom_synx_crawl {
 void symptom_synx_crawl::ini(string query) {
     cout << "Initializing: \t\t[" + query + "]";
     input = query;
-    ifstream readfile(query.c_str());
+    ifstream readfile("DataFiles/symptoms.webmd.comdefault.htm.txt");
     if(readfile.good()) {
-        file = tools::read_file("sample.txt");
+
+
+        /* 
+
+            should read the whole dir and take all the files into mem...
+            .... could be an issue if files goes in the level of GB....
+
+            per file implimentation should be used here in case of that!!
+        */
+        
+        file = tools::read_file("DataFiles/symptoms.webmd.comdefault.htm.txt");
         cout << "\t\t[ok]" << endl;
         exe = true;
     }
@@ -36,7 +39,7 @@ void symptom_synx_crawl::ini(string query) {
 void symptom_synx_crawl::run() {
     if(!exe) return;
     cout << "Executing: \t\t[run] ...";
-    if(file.size() > 1) {
+    if(file.size() < 1) {
         cout << "\t\t[failed]" << endl;
         exit(1);
     }
@@ -57,13 +60,15 @@ void symptom_synx_crawl::show() {
     system("clear");
     cout << "---- KEY WORDS ----" << endl;
     cout << "Number: " << ex_syntax.size() << endl << endl;
-    for(auto i: ex_syntax) cout << "\t\t\t" << i << endl;
+    for(unsigned int i=0;i<ex_syntax.size();i++) {
+        cout << i+1 << " -- " << ex_syntax[i] << endl;
+    }
 }
 
 void symptom_synx_crawl::write() {
-    if(!exe) return;
+    if(!exe || ex_syntax.size() < 1) return;
     
-    cout << "Writing: [database/symptoms/syntax/file]: ";
+    cout << "Writing: [database/symptoms/syntax/file.txt]: ";
     ofstream writefile("database/symptoms/syntax/file.txt", ios::app);
     for(auto i: ex_syntax) writefile << i << endl;
     writefile.close();

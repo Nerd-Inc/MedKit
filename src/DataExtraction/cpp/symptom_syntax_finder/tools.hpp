@@ -1,6 +1,12 @@
 #ifndef TOOLS_H_INCLUDED
 #define TOOLS_H_INCLUDED
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <set>
+#include <map>
+#include <unistd.h>
+#include <typeinfo>
 using namespace std;
 
 namespace tools {

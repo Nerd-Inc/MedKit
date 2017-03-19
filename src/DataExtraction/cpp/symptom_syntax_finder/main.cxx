@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+   
    symptom_synx_crawl symptom_synx_crawl;
 
    symptom_synx_crawl.ini("headache");
