@@ -1,0 +1,326 @@
+THE_URL:http://www.webmd.com/rx
+THE_TITLE:Prescription Prices and Pharmacy Discounts with the WebMDRx Savings Card
+   #RSS
+
+   Skip to main content
+
+   Logo for WebMD
+   Logo for WebMD
+     * Check Your Symptoms
+     * Find A Doctor
+     * Find Lowest Drug Prices
+
+     * Health
+       A-Z Health A-Z
+       Health A-Z
+
+Common Conditions
+          + ADD/ADHD
+          + Allergies
+          + Arthritis
+          + Cancer
+          + Cold, Flu & Cough
+          + Depression
+          + Diabetes
+          + Eye Health
+          + Heart Disease
+          + Heartburn/GERD
+          + Pain Management
+          + Sexual Conditions
+          + Skin Problems
+          + Sleep Disorders
+          + View All
+
+Resources
+          + Symptom Checker
+          + Expert Blogs and Interviews
+          + Message Boards
+          + Insurance Guide
+          + Find a Doctor
+
+   Featured Topics
+     * man in silhouette and brain Video Learn the F.A.S.T. Test for
+       Stroke
+     * knee replacement Video See Inside Knee Replacement Surgery
+
+     Drugs &
+   Supplements Drugs & Supplements
+   Drugs & Supplements
+
+Find & Review
+
+     * Drugs
+     * Supplements
+
+Tools
+
+     * Manage Your Medications
+     * Pill Identifier
+     * Check for Interactions
+
+Drug Basics & Safety
+
+     * Commonly Abused Drugs
+     * Taking Meds When Pregnant
+
+    Featured Topics
+     * marijuana leaves News How and When Medical Marijuana Is Used
+     * vitamins and supplements Slideshow Vitamins and Minerals From A to
+       Zinc
+
+     Living
+   Healthy Living Healthy
+   Living Healthy
+
+Diet, Food & Fitness
+
+     * Diet & Weight Management
+     * Weight Loss & Obesity
+     * Food & Recipes
+     * Fitness & Exercise
+
+Beauty & Balance
+
+     * Healthy Beauty
+     * Health & Balance
+     * Sex & Relationships
+     * Oral Care
+
+Living Well
+
+     * Women's Health
+     * Men's Health
+     * Aging Well
+     * Healthy Teens
+     * Fit Kids
+
+    Featured Topics
+     * thyroid Video What Does Your Thyroid Do?
+     * us capitol News Future of U.S. Health Care: What You Need to Know
+
+     Family &
+   Pregnancy Family & Pregnancy
+   Family & Pregnancy
+
+All About Pregnancy
+
+     * Getting Pregnant
+     * First Trimester
+     * Second Trimester
+     * Third Trimester
+     * View All
+
+Parenting Guide
+
+     * Newborn & Baby
+     * Children’s Health
+     * Children’s Vaccines
+     * Raising Fit Kids
+     * View All
+
+Pet Care Essentials
+
+     * Healthy Cats
+     * Healthy Dogs
+     * View All
+
+    Featured Topics
+     * harris lott Special Report Cancer Takes a Toll on a Small Town
+     * boy throwing paper airplane Slideshow Symptoms of ADHD in Children
+
+     News &
+   Experts News & Experts
+
+   News & Experts
+
+Health News
+
+     * Fish Oil Pills May Help After Heart Attack
+     * 'Dirty Dozen' List of Produce With Most Pesticides
+     * Is Parenthood the Key to Longevity?
+     * Medical Groups Sound the Alarm on Climate Change
+     * Video: What Happens During an Allergy Attack
+
+Experts & Community
+
+     * Message Boards
+     * Expert Blogs
+     * News Center
+
+    Featured Topics
+     * us capitol News Future of U.S. Health Care: What You Need to Know
+     * man using computer mouse Newsletters Sign Up to Receive Our Free
+       Newsletters
+
+     Mobile Apps
+
+     Subscriptions
+
+     * Sign In
+     * Subscribe
+     * My Profile
+          + My Tools
+          + My WebMD Pages
+          + My Account
+          + Sign Out
+
+   ____________________ (BUTTON)
+
+   [web-m-d-rx-beta.svg]
+
+Get the prescriptions you need at the prices you want.
+
+   ____________________
+     * Sorry, your search produced no results.
+
+   (BUTTON) Find lowest prices
+   For Physicians   |   Browse All Drugs
+
+{{displayDrugName.drug}} {{(other_names.length>0)? '('+AlternateDisplay :
+''}} {{drug.name}} {{(other_names.length>0)? ')' : ''}}
+
+   {{monograph.uses.split(" ").splice(0, 32).join(" ")}}
+
+   No drug description available
+
+   Read more...
+     * {{form.form}}
+     * {{strength.strength}}
+     * {{quantity.value}}
+
+   {{location}}
+   (BUTTON) EDIT
+
+   We're Sorry. We found no results matching your search. Make sure your
+   spelling is correct or try broadening your keywords.
+
+Show this savings card at the pharmacy.
+
+Show this savings card at the pharmacy.
+
+   [web-m-d-rx-beta.svg]
+   SAVINGS CARD
+   MEMBER ID
+   {{memberId}}
+   RxBIN
+   010439
+   RxPCN
+   WEBMDRX
+   RxGROUP
+   {{groupId}}
+   Customer Service 1-800-898-1828
+   THIS IS NOT INSURANCE. VOID WHERE PROHIBITED BY LAW.
+   [text-icon.png]
+
+   TEXT TO PHONE
+   [email.png]
+
+   SEND VIA EMAIL
+   [print.png]
+
+   PRINT A CARD
+   How does this work?   [icon-video.png]
+
+Get Savings Anywhere
+
+   Download the WebMDRx app and use the WebMDRx Savings Card anytime,
+   anywhere.
+
+Health Solutions
+
+     * Knee Pain Management
+     * Dupuytren’s Treatment
+     * Cancer Treatments
+     * Symptoms of IBS-D
+     * Discover Healthy Fats
+     * Care for Valve Disease?
+     * Living with Tinnitus?
+     * Learn About Cholesterol
+     * Digestive Symptoms
+     * Penis Curved When Erect
+     * Aortic Valve Stenosis?
+     * Hearing Loss Help
+     * Skin Cancer Treatment
+     * Peyronie’s Disease?
+     * Food Intolerance Diet
+
+More from WebMD
+
+     * Common Signs of Bipolar Mania
+     * Your Hodgkin's Treatment Plan
+     * Psoriasis
+     * MS Assessment
+     * Anaphylaxis
+     * ADHD in Children
+     * Diabetes Diet
+     * Safer Sports for Kids
+     * Multiple Myeloma
+     * Hearing Loss: Its Causes and Treatment
+     * Treatments for Cancer
+     * A Visual Guide to Asthma
+     * Living Donor Liver Donation
+     * Prostate Cancer Clinical Trials
+     * Diabetes Assessment
+     * Live Better With Diabetes
+     * Atrial Fibrillation Assessment
+     * Treating Advanced Prostate Cancer
+
+     * Logo for WebMD
+          + Visit WebMD on Facebook
+          + Visit WebMD on Twitter
+          + Visit WebMD on Pinterest
+     * Policy
+          + Privacy Policy
+          + Terms of Use
+          + Contact Us
+    About
+          + About WebMD
+          + Careers
+          + Newsletter
+          + Corporate
+          + WebMD Health Services
+          + Site Map
+          + Accessibility
+     * WebMD Network
+          + Medscape
+          + Medscape Reference
+          + MedicineNet
+          + eMedicineHealth
+          + RxList
+          + OnHealth
+          + BootsWebMD
+          + First Aid
+          + WebMD Magazine
+          + WebMD Health Record
+          + Dictionary
+          + Physician Directory
+     * Our Apps
+          + WebMD Mobile
+          + WebMD App
+          + Pregnancy
+          + Baby
+          + Allergy
+          + Pain Coach
+          + WebMD Magazine
+          + Medscape
+          + TheHeart
+    For Sponsors
+          + Advertise with Us
+          + Advertising Policy
+          + Sponsor Policy
+
+     * URAC Seal
+     * TRUSTe Privacy Certification
+     * TAG seal
+     * Honcode Seal
+     * Adchoices
+
+   © 2005 - 2017 WebMD, LLC. All rights reserved.
+
+   WebMD does not provide medical advice, diagnosis or treatment.
+
+   See additional information.
+
+   Cancer Treatment & Nutrition
+
+   11 Tips to Control Diabetes

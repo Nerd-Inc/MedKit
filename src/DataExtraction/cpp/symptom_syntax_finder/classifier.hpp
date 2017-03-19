@@ -1,9 +1,9 @@
 #ifndef CLASSIFIER_H_INCLUDED
 #define CLASSIFIER_H_INCLUDED
 #include "tools.hpp"
-#define FILE "database/symptoms/syntax/file.txt"
+#define _FILE "database/symptoms/syntax/file.txt"
 #define NAMES "database/symptoms/names/files.txt"
-#define PARSED_DIR "databse/parser/raw"
+#define PARSED_DIR "DataFiles"
 using namespace std;
 
 
@@ -16,8 +16,8 @@ class classifier {
 };
 
 void classifier::check() {
-    cout << "Checking file: " << FILE << endl;
-    if(tools::check_file(FILE)) {
+    cout << "Checking file: " << _FILE << endl;
+    if(tools::check_file(_FILE)) {
         cout << "\t\t[ok]" << endl;
         exe = true;
     } else cout << "\t\t[failed]" << endl;
@@ -27,7 +27,7 @@ void classifier::check() {
 
 void classifier::find() {
     if(!exe) return;
-    vector<string> file {tools::read_file(FILE)};
+    vector<string> file {tools::read_file(_FILE)};
     vector<string> file2 {tools::read_dir(PARSED_DIR)};
     cout << "Finding: [ RUNTIME: " << file.size() * file2.size() << "]";
 
@@ -37,13 +37,13 @@ void classifier::find() {
     }
 
     
-    for(unsigned int i=0;i<file.size();i++) {
+   for(unsigned int i=0;i<file.size();i++) {
         for(unsigned int i1;i1<file2.size();i1++) {
             if(file2[i1].find(file[i])!=string::npos) {
-                //found_matches.insert(file2[i1]);
+                found_matches.insert(file2[i1]);
             }
         }
-    }
+    } 
     
     cout << "\t\t[ok]" << endl;
     //12 o'clock data haha

@@ -2,11 +2,12 @@
 #define TOOLS_H_INCLUDED
 #include <iostream>
 #include <vector>
-#include <fstream>
 #include <set>
 #include <map>
 #include <unistd.h>
+#include <string>
 #include <typeinfo>
+#include <fstream>
 using namespace std;
 
 namespace tools {
@@ -14,7 +15,22 @@ namespace tools {
 	bool kill(string), check_file(string);
 	template<class T> void show(T);
 	void show(vector<string>);
-	string remove_space(string);
+	string remove_space(string), pipe_terminal(string);
+}
+
+string tools::pipe_terminal(string command) {
+	string data;
+	FILE * stream;
+	const int max_buffer = 1024;
+	char buffer[max_buffer];
+	command.append(" 2>&1");
+
+	stream = popen(command.c_str(), "r");
+	if (stream) {
+		while (!feof(stream)) if (fgets(buffer, max_buffer, stream) != NULL) data.append(buffer);
+		pclose(stream);
+	}
+	return data;
 }
 
 
@@ -27,7 +43,11 @@ bool tools::check_file(string filename) {
 
 vector<string> tools::read_dir(string dirname) {
 
-	
+	string command = "ls " + dirname;
+	//cout << "command: " << command << endl;
+	string files = tools::pipe_terminal(command);
+	//cout << files << endl;
+	return seperate(files, '\0');
 }
 
 //template -> string, vector
