@@ -3,7 +3,7 @@
 
 body {
 	@extend .reset;
-	background-color: $white
+	background-color: $white;
 }
 .container {
 	@extend .reset;
@@ -19,12 +19,14 @@ body {
 	width: 100%;
 	flex-grow: 1;
 	background-color: $deep-purple;
-	align-items: center;
-	h2, p { @extend .describe; }
-	h2 { font-size: 5em; margin-bottom: 0px;}
-	p { font-size: 1.5em; margin-top: 0px;}
+	align-items: flex-end;
+	h2, p { @extend .describe; @extend .no-margin; }
+	h2 { font-size: 5em; margin-top: 2em; }
+	p { font-size: 1.5em; }
 }
 .mainContent {
-	background-color: $white;
-	flex-grow: 3;
+	background-color: $deep-purple;
+	flex-grow: 2;
 }
+// Search bar
+@import 'partials/search';
