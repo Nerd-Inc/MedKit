@@ -13,7 +13,7 @@ for line in `cat urls.txt`; do
 	shortURL=`echo $line | cut -c8-`
 	fileName="`echo $shortURL | sed 's/\///g'`"
 
-	datafolder="../../DataFiles/"
+	datafolder="DataFiles/"
 	# Show status info
 	echo "> Scraping URL: $shortURL"
 	echo "> -----------------------"

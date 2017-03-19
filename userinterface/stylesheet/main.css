@@ -4,7 +4,7 @@
   margin: 0px;
 }
 
-.full-screen, .container {
+.full-screen, .container, .search--bar {
   width: 100%;
   height: 100%;
 }
@@ -12,6 +12,10 @@
 .describe, .intro h2, .intro p {
   font-family: "Roboto", "Ubuntu", "Segeo UI", sans-serif;
   color: #FFFFFF;
+}
+
+.no-margin, .intro h2, .intro p {
+  margin: 0px;
 }
 
 body {
@@ -31,18 +35,57 @@ body {
   width: 100%;
   flex-grow: 1;
   background-color: #673AB7;
-  align-items: center;
+  align-items: flex-end;
 }
 .intro h2 {
   font-size: 5em;
-  margin-bottom: 0px;
+  margin-top: 2em;
 }
 .intro p {
   font-size: 1.5em;
-  margin-top: 0px;
 }
 
 .mainContent {
+  background-color: #673AB7;
+  flex-grow: 2;
+}
+
+.search--bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.search--bar input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+.search--bar input[type="search"]::-webkit-input-placeholder {
+  text-align: right;
+}
+
+.medkit-search {
+  display: flex;
+  width: 50vw;
+  height: 44px;
+}
+
+.main-search-input {
   background-color: #FFFFFF;
-  flex-grow: 3;
+  width: 100%;
+  padding: 1em;
+  border-radius: 2px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.main-search-input:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.search-button {
+  background: transparent;
+  border: none;
 }
