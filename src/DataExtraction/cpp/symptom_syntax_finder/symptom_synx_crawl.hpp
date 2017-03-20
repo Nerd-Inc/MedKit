@@ -1,6 +1,7 @@
 
 #ifndef symptom_synx_crawlr_H_INCLUDED
 #define symptom_synx_crawlr_H_INCLUDED
+#define SYN_FILE "database/symptoms/syntax/file.txt"
 #include "tools.hpp"
 using namespace std;
 
@@ -8,8 +9,9 @@ using namespace std;
 class symptom_synx_crawl {
     private:
     string input;
-    vector<string> ex_syntax, file;
+    vector<string> file;
     bool exe = false;
+    set<string> loaded_syntax;
     public:
     bool exe_classifier = false;
     void show(), run(), ini(string), write();
@@ -17,9 +19,17 @@ class symptom_synx_crawl {
 
 void symptom_synx_crawl::ini(string query) {
     cout << "Initializing: \t\t[" + query + "]";
-    input = query;
-    ifstream readfile("DataFiles/symptoms.webmd.comdefault.htm.txt");
+
+    ifstream readfile(SYN_FILE);
     if(readfile.good()) {
+        //load the whole lot into mem
+        loaded_syntax = tools::read_file(SYN_FILE);
+        readfile.close();
+        cout << "[" << loaded_syntax.size() << " syntax loaded!]";
+    }
+    input = query;
+    ifstream readfile1("DataFiles/symptoms.webmd.comdefault.htm.txt");
+    if(readfile1.good()) {
 
 
         /* 
@@ -30,16 +40,17 @@ void symptom_synx_crawl::ini(string query) {
             per file implimentation should be used here in case of that!!
         */
         
-        file = tools::read_file("DataFiles/symptoms.webmd.comdefault.htm.txt");
+        file = tools::read_file("DataFiles/symptoms.webmd.comdefault.htm.txt", false);
         cout << "\t\t[ok]" << endl;
         exe = true;
     }
     else cout << "\t\t[failed]" << endl;
+    readfile1.close();
 }
 
 void symptom_synx_crawl::run() {
     if(!exe) return;
-    cout << "Executing: \t\t[run] ...";
+    cout << "Executing: \t\t[run]";
     if(file.size() < 1) {
         cout << "\t\t[failed]" << endl;
         exit(1);
@@ -48,7 +59,7 @@ void symptom_synx_crawl::run() {
         if(file[i].find(input)!=string::npos) {
             if(i < file.size() - 3) {
                 string temp = file[i+1] + " " + file[i+2];
-                ex_syntax.push_back(temp);
+                loaded_syntax.insert(temp);
             }
             else cout << "..." << endl;
         }
@@ -60,18 +71,19 @@ void symptom_synx_crawl::show() {
     if(!exe) return;
     system("clear");
     cout << "---- KEY WORDS ----" << endl;
-    cout << "Number: " << ex_syntax.size() << endl << endl;
-    for(unsigned int i=0;i<ex_syntax.size();i++) {
-        cout << i+1 << " -- " << ex_syntax[i] << endl;
+    cout << "Number: " << loaded_syntax.size() << endl << endl;
+    int count = 1;
+    for(auto i=loaded_syntax.begin();i!=loaded_syntax.end();i++, count++) {
+        cout << count << " -- " << *i << endl;
     }
 }
 
 void symptom_synx_crawl::write() {
-    if(!exe || ex_syntax.size() < 1) return;
+    if(!exe || loaded_syntax.size() < 1) return;
     
     cout << "Writing: [database/symptoms/syntax/file.txt]: ";
-    ofstream writefile("database/symptoms/syntax/file.txt", ios::app);
-    for(auto i: ex_syntax) writefile << i << endl;
+    ofstream writefile("database/symptoms/syntax/file.txt", ios::trunc);
+    for(auto i: loaded_syntax) writefile << i << endl;
     writefile.close();
     cout << "\t\t[ok]" << endl;
 

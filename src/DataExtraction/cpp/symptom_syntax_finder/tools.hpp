@@ -11,7 +11,8 @@
 using namespace std;
 
 namespace tools {
-	vector<string> read_file(string), seperate(string, char);
+	vector<string> read_file(string, bool), seperate(string, char);
+	set<string> read_file(string);
 	vector<vector<string>> read_dir(string);
 	bool kill(string), check_file(string);
 	template<class T> void show(T);
@@ -52,13 +53,13 @@ vector<vector<string>> tools::read_dir(string dirname) {
 	//for(auto i: hold) cout << "...> " << i << endl;
 
 	vector<vector<string>> ret;
-	for(auto i: hold) ret.push_back(tools::read_file(dirname + "/" + i));
+	for(auto i: hold) ret.push_back(read_file(dirname + "/" + i, false));
 
 	return ret;
 }
 
 //template -> string, vector
-vector<string> tools::read_file(string filename) {
+vector<string> tools::read_file(string filename, bool sort) {
 	ifstream readfile(filename.c_str());
 	string temp;
 	vector<string> file;
@@ -69,12 +70,23 @@ vector<string> tools::read_file(string filename) {
 	return file;
 }
 
+set<string> tools::read_file(string filename) {
+	ifstream readfile(filename.c_str());
+	string temp;
+	set<string> file;
+	
+	while(getline(readfile, temp)) file.insert(temp);
+	readfile.close();
+	
+	return file;
+}
+
 bool tools::kill(string process_name) {
 	cout << "KILLING " + process_name << endl;
 	string command = "ps s > tmp_file.txt";
 	system(command.c_str());
 	
-	vector<string> processes = tools::read_file("tmp_file.txt");
+	vector<string> processes = tools::read_file("tmp_file.txt", false);
 	//processes.size() == 0 ? cout << "Process not running!!" << endl : cout << "Found processes" << endl;
 	
 	//for(auto i: processes) cout << i << endl;
