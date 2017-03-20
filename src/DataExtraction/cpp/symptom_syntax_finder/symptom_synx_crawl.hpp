@@ -11,6 +11,7 @@ class symptom_synx_crawl {
     vector<string> ex_syntax, file;
     bool exe = false;
     public:
+    bool exe_classifier = false;
     void show(), run(), ini(string), write();
 };
 
@@ -73,6 +74,8 @@ void symptom_synx_crawl::write() {
     for(auto i: ex_syntax) writefile << i << endl;
     writefile.close();
     cout << "\t\t[ok]" << endl;
+
+    exe_classifier = true;
 
 }
 
