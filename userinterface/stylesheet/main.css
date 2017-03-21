@@ -19,7 +19,7 @@
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #673AB7;
 }
 
 .container {
@@ -73,7 +73,7 @@ body {
 .main-search-input {
   background-color: #FFFFFF;
   width: 100%;
-  padding: 1em;
+  padding: 1em 3em 1em 1em;
   border-radius: 2px;
   font-size: 16px;
   border: none;
