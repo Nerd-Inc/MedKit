@@ -21,12 +21,21 @@
 			<div class="search--bar">
 				<form method="" action="" class="medkit-search">
 					<input type="hidden" id="userID" />
-					<input type="search" class="main-search-input" name="searchbar" maxlength="2048" 
-							autocomplete="off" placeholder='Say "OK MedKit"'>
+					<input type="search" id="searchbar-main" class="main-search-input" name="searchbar" maxlength="2048" 
+							autocomplete="off" autofocus="true" accesskey="S" placeholder='Say "OK MedKit"'>
 				</form>
 			</div>
 		</section>
 	</main>
+	<script>
+		var searchBar = document.getElementById('searchbar-main');
+			if(searchBar === document.activeElement && searchBar.value !== ''){
+				searchBar.style.paddingRight = '1em';
+			} 
+			else if(searchBar === document.activeElement && searchBar.value == ''){ 
+				searchBar.style.paddingRight = '3em'; 
+			}
+	</script>
 </body>
 
 </html>

@@ -16,6 +16,7 @@ var createWindow = function () {
 	mainWindow = new BrowserWindow({
 		width: 1024,
 		height: 600,
+		backgroundColor: '#673AB7',
 		title: 'MedKit - Symptoms Search Engine',
 		titleBarStyle: 'hidden'
 	});
