@@ -1,5 +1,6 @@
-# MedKit
-A symptoms search engine
+<center> <h1> MedKit </h1> </center>
+
+![MedKit](userinterface/images/MedKit2.0.png)    
 
 ## The Devs
 Please clone the main repo and begin pushing codes into it.
