@@ -4,6 +4,9 @@ node_modules
 # sass cache 
 .sass-cache
 
+# Visual Studio Code config files
+.vscode
+
 # Compiled Object files
 *.slo
 *.lo
