@@ -41,7 +41,7 @@
 ```
 ## Want to Contribute?
 
-All contributions are welcomed and highly appreciated. If you will like to be a contributor to this project, take a few minutes to read the [__Code of Conduct__](../blob/master/code_of_conduct.md). Also, you should configure your code editor/IDE to use 4 tabs of indention. Variables names should be descriptive and should be follow the code style of the language. Example:
+All contributions are welcomed and highly appreciated. If you will like to be a contributor to this project, take a few minutes to read the [__Code of Conduct__](../master/code_of_conduct.md). Also, you should configure your code editor/IDE to use 4 tabs of indention. Variables names should be descriptive and should be follow the code style of the language. Example:
 
 JavaScript
 ```javascript
